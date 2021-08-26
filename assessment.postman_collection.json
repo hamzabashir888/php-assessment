@@ -1,0 +1,368 @@
+{
+	"info": {
+		"_postman_id": "12f92696-ad1d-425f-bfd0-a3c9d64b27e8",
+		"name": "assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "hamza+1@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/assessment-task/api/register",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"assessment-task",
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "hamza@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/assessment-task/api/login",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"assessment-task",
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/assessment-task/api/verify-user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "hznZ7q",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/assessment-task/api/verify-user",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"assessment-task",
+						"api",
+						"verify-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2Fzc2Vzc21lbnQtdGFza1wvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYyOTgzNjA1OSwiZXhwIjoxNjI5ODM5NjU5LCJuYmYiOjE2Mjk4MzYwNTksImp0aSI6InVvaGY5OWdhTUVXaVM5RmgiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Vrc02p41EHNHMMPPErgdWTTjxE2lG65KG3Uf_Pxapy4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost/assessment-task/api/auth/logout",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"assessment-task",
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-list",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2Fzc2Vzc21lbnQtdGFza1wvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYyOTkwOTk4NSwiZXhwIjoxNjI5OTEzNTg1LCJuYmYiOjE2Mjk5MDk5ODUsImp0aSI6ImRWU2I3RFF6UjNPTVV5YWwiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.sQVJPPPdgdOLNVz7My-5bA0AR-PosrnZwLi_ZqWaHmk",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "abc",
+							"description": "mus55",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "uuuuu",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/assessment-task/api/auth/create-list",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"assessment-task",
+						"api",
+						"auth",
+						"create-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view-users-to-do-list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2Fzc2Vzc21lbnQtdGFza1wvYXBpXC9sb2dpbiIsImlhdCI6MTYyOTkxMzgwMywiZXhwIjoxNjI5OTE3NDAzLCJuYmYiOjE2Mjk5MTM4MDMsImp0aSI6IkNucFlhNUY3Q29BZjczOUUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.VI0F2Xdw1KVSJ-fwdo-T0HWaruydLKkSB4_mnPN-xYk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost/assessment-task/api/auth/view-users-to-do-list",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"assessment-task",
+						"api",
+						"auth",
+						"view-users-to-do-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search-to-do-list",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2Fzc2Vzc21lbnQtdGFza1wvYXBpXC9sb2dpbiIsImlhdCI6MTYyOTkxMDU2MiwiZXhwIjoxNjI5OTE0MTYyLCJuYmYiOjE2Mjk5MTA1NjIsImp0aSI6InVoc1NRVEdhVHBzUGVtY2oiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.YOmq6R5tuqFQo4RKdRT1NasUCyyauLvExDOvqP4Yp_Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "item",
+							"value": "a",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/assessment-task/api/auth/search-to-do-list",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"assessment-task",
+						"api",
+						"auth",
+						"search-to-do-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-to-do-list",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2Fzc2Vzc21lbnQtdGFza1wvYXBpXC9sb2dpbiIsImlhdCI6MTYyOTkxMDU2MiwiZXhwIjoxNjI5OTE0MTYyLCJuYmYiOjE2Mjk5MTA1NjIsImp0aSI6InVoc1NRVEdhVHBzUGVtY2oiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.YOmq6R5tuqFQo4RKdRT1NasUCyyauLvExDOvqP4Yp_Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "item_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "jjj",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "jjkk",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost/assessment-task/api/auth/update-to-do-list",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"assessment-task",
+						"api",
+						"auth",
+						"update-to-do-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-to-do-list",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2Fzc2Vzc21lbnQtdGFza1wvYXBpXC9sb2dpbiIsImlhdCI6MTYyOTkxMDU2MiwiZXhwIjoxNjI5OTE0MTYyLCJuYmYiOjE2Mjk5MTA1NjIsImp0aSI6InVoc1NRVEdhVHBzUGVtY2oiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.YOmq6R5tuqFQo4RKdRT1NasUCyyauLvExDOvqP4Yp_Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost/assessment-task/api/auth/delete-to-do-list/45",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"assessment-task",
+						"api",
+						"auth",
+						"delete-to-do-list",
+						"45"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
