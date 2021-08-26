@@ -32,7 +32,7 @@ class ToDoController extends Controller
             'description'=>$request->description
         ];
         $list=ToDoList::Create($data);
-        return response()->json(['status'=>200,'message'=>'List Saved Successfully.','data'=>$data]);
+        return response()->json(['status'=>200,'message'=>'List Saved Successfully.','data'=>$list]);
     }
     public function viewList()
     {
